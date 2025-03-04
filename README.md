@@ -49,7 +49,6 @@ The creation of volumetric clouds is based on screen-space post-processing effec
 - Shape: First, sample the weather map to obtain the basic shape and distribution of clouds in the sky. This is then mapped to make the cloud shapes appear more natural. Next, sample 3D Perlin-Worley noise texture to get the base density of the clouds, followed by sampling 3D Worley noise texture to add detail to the cloud density(I have already added a noise generator to this project). Finally, use other noise to apply UV perturbations to the clouds, creating an animated effect of rolling cloud layers.
 - Lighting: The scattering within the cloud layers is primarily Mie scattering, typically using the HG phase function as a substitute for the more complex Mie scattering. The absorption of light by particles within the cloud layers follows Beer's Law. Here, I used a function fitted by Guerrilla, which combines Beer's Law with the "Powder Effect".
 
-Note that the ray marching calculations for the volumetric clouds are performed in real-time and I have not yet implemented any optimizations, which may impact performance.
 ###### References
 - [The Main Tutorial I Followed](https://zhuanlan.zhihu.com/p/248406797)
 - [A Ray-Box Intersection Algorithm](https://jcgt.org/published/0007/03/04/)
